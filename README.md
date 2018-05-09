@@ -22,7 +22,7 @@ with various utility examples that you might want to use.
     }
     ```
     Response format in development
-    ```json
+    ```js
      {
         "code": "not_found",
         "message": "Resource not found.",
@@ -31,7 +31,7 @@ with various utility examples that you might want to use.
      }
     ```
     Response format in production mode
-     ```json
+     ```js
       {
         "code": "not_found",
         "message": "Resource not found."
