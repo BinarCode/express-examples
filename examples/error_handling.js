@@ -67,7 +67,7 @@ function errorMiddleware(err, req, res, next) {
 
     // set stack trace and request path only in development mode
     if(process.env.NODE_ENV === 'dev'){
-      response.stack = err.stack;
+      response.stackTrace = err.stack;
       response.path = req.path
     }
 
