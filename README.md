@@ -8,7 +8,6 @@ with various utility examples that you might want to use.
 - Small one file examples that are easy to follow with
     - Authorization middleware based on roles
     - Error handling middleware
-    - Translation support based on language headers
     - Need more? Feel free to open an issue or PR
 
 ## Prerequisites
