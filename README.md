@@ -43,6 +43,23 @@ Response format in production mode
   }
 ```
 
+## Request logging
+Use [morgan](https://github.com/expressjs/morgan) to log request information to files
+as well as printing it to console for status codes > 400
+
+```js
+// create a rotating write stream
+const accessLogStream = rfs('api.log', {
+  interval: '1d', // rotate daily
+  path: logDirectory
+});
+
+// log only 4xx and 5xx responses to console
+app.use(morgan('dev', {
+  skip: function (req, res) { return res.statusCode < 400 }
+}));
+```
+
 ## Questions
 
 Need more? Feel free to open an issue or PR

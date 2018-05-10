@@ -68,7 +68,8 @@ function errorMiddleware(err, req, res, next) {
     // set stack trace and request path only in development mode
     if(process.env.NODE_ENV === 'dev'){
       response.stackTrace = err.stack;
-      response.path = req.path
+      response.path = req.path;
+      console.error(err.stack)
     }
 
     return res.status(err.statusCode)
@@ -79,4 +80,4 @@ function errorMiddleware(err, req, res, next) {
 
 app.use(errorMiddleware);
 
-app.listen(3001, () => console.log('Error handling example started'));
+app.listen(3000, () => console.log('Error handling example started'));

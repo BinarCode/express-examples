@@ -33,4 +33,4 @@ app.get('/', authorize([roles.Admin, roles.SuperUser]), function (req, res) {
 });
 
 
-app.listen(3001, () => console.log('Authorization middleware example started'));
+app.listen(3000, () => console.log('Authorization middleware example started'));
