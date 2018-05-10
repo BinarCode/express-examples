@@ -43,7 +43,7 @@ Response format in production mode
   }
 ```
 
-## Request logging
+### Request logging
 Use [morgan](https://github.com/expressjs/morgan) to log request information to files
 as well as printing it to console for status codes > 400
 
@@ -59,6 +59,17 @@ app.use(morgan('dev', {
   skip: function (req, res) { return res.statusCode < 400 }
 }));
 ```
+
+### Use `async/await` with node.js operations
+Use of node.js [util.promisify](https://nodejs.org/dist/latest-v8.x/docs/api/util.html#util_util_promisify_original) to convert callback based operations to promises.
+Example:
+```js
+const readFileAsync = util.promisify(fs.readFile);
+
+// usage
+const content = await readFileAsync(pathToFile);
+```
+
 
 ## Questions
 
