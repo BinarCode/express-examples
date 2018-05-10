@@ -60,7 +60,7 @@ app.use(morgan('dev', {
 }));
 ```
 
-### Use `async/await` with node.js operations
+### Promisify callback functions
 Use of node.js [util.promisify](https://nodejs.org/dist/latest-v8.x/docs/api/util.html#util_util_promisify_original) to convert callback based operations to promises.
 Example:
 ```js
